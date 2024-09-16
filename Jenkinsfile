@@ -24,7 +24,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build(env.DOCKER_IMAGE)
+                    sh 'docker build .'
                 }
             }
         }
