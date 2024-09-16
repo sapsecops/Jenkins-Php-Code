@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'php:7.4-cli'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
+            args '-v /var/run/docker.sock:/var/run/docker.sock --user root'
         }
     }
     
