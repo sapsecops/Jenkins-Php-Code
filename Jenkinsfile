@@ -7,7 +7,7 @@ pipeline {
     }
     
     environment {
-        DOCKER_IMAGE = 'tampoohoonm/test:${BUILD_NUMBER}'
+        DOCKER_IMAGE = 'tampoohoonm/test:latest'
     }
     
     stages {
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     echo "docker stage"
-                    docker.build(env.DOCKER_IMAGE)
+                    docker.build(env.DOCKER_IMAGE, "-f Dockerfile .")
                 }
             }
         }
