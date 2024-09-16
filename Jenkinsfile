@@ -15,8 +15,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                // sh 'sudo apt-get update && apt-get install -y zip unzip'
-                sh 'curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer'
-                sh 'composer install --no-interaction --no-progress --prefer-dist'
+                sh 'curl -sS https://getcomposer.org/installer -o composer-setup.php'
+                sh 'php composer-setup.php --install-dir=/usr/local/bin --filename=composer'
             }
         }
         
