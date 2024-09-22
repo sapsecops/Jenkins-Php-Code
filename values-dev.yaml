@@ -1,0 +1,8 @@
+app:
+  name: project-k8s-deployment-dev
+replicaCount: 3
+image:
+  repository: tampoohoonm/test
+  tag: latest
+service:
+  nodePort: 30080
