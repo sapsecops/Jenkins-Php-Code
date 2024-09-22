@@ -1,16 +1,13 @@
 pipeline {
-    agent {
-        docker {
-            image 'php:7.4-cli'
-            args '-v /var/run/docker.sock:/var/run/docker.sock --user root'
-        }
-    }
-    
-    environment {
-        DOCKER_IMAGE = 'tampoohoonm/test:latest'
-    }
-    
+    agent any
+
     stages {
+
+        stage('checkout scm'){
+            steps{
+                checkout scm
+            }
+        }
         
         stage('Install Dependencies') {
             steps {
