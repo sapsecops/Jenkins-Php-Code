@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     echo "docker stage"
-                    docker.build(env.DOCKER_IMAGE, "-f Dockerfile .")
+                    //docker.build(env.DOCKER_IMAGE, "-f Dockerfile .")
                 }
             }
         }
