@@ -57,7 +57,7 @@ $app = new App();
 <body>
     <div class="content">
         <div class="image-container">
-            <img src="images/celebration.jpg" alt="Celebration" />
+            <img src="images/jenkins.png" alt="Celebration" />
         </div>
         <div class="message-container">
             <h1 class="scrolling-message"><?php echo htmlspecialchars($app->getMessage()); ?></h1>
