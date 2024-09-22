@@ -23,7 +23,7 @@ kind: Service
 metadata:
   name: project-k8s-deployment-prod
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: project-k8s-deployment-prod
   ports:
